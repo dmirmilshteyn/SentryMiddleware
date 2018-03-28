@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Daniel Mirmilshteyn</Authors>
+    <Company />
+    <Product />
+    <Version>0.0.1</Version>
+    <Description>Unofficial ASP.NET Core middleware for Sentry.</Description>
+    <PackageProjectUrl>https://github.com/dmirmilshteyn/SentryMiddleware</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+    <PackageReference Include="SharpRaven" Version="2.3.2" />
+  </ItemGroup>
+
+</Project>
