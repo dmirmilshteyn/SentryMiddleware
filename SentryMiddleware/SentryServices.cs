@@ -9,7 +9,9 @@ namespace SentryMiddleware
     public static class SentryServices
     {
         public static void AddSentry(this IServiceCollection services, string dsn) {
-            services.AddScoped(options => new RavenClient(dsn));
+            if (!string.IsNullOrEmpty(dsn)) {
+                services.AddScoped(options => new RavenClient(dsn));
+            }
         }
     }
 }

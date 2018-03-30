@@ -14,12 +14,17 @@ namespace SentryMiddleware
         RequestDelegate next;
         RavenClient ravenClient;
 
-        public SentryExceptionHandler(RequestDelegate next, RavenClient ravenClient) {
+        public SentryExceptionHandler(RequestDelegate next, RavenClient ravenClient = null) {
             this.next = next;
             this.ravenClient = ravenClient;
         }
 
         public async Task Invoke(HttpContext context) {
+            // Skip if a RavenClient is not configured
+            if (ravenClient == null) {
+                return;
+            }
+
             try {
                 await next(context);
             } catch (Exception ex) {
