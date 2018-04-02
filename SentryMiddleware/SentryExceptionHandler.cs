@@ -22,6 +22,8 @@ namespace SentryMiddleware
         public async Task Invoke(HttpContext context) {
             // Skip if a RavenClient is not configured
             if (ravenClient == null) {
+                await next(context);
+
                 return;
             }
 
