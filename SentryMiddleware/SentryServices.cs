@@ -10,7 +10,7 @@ namespace SentryMiddleware
     {
         public static void AddSentry(this IServiceCollection services, string dsn) {
             if (!string.IsNullOrEmpty(dsn)) {
-                services.AddScoped(options => new RavenClient(dsn));
+                services.AddSingleton(options => new RavenClient(dsn));
             }
         }
     }
