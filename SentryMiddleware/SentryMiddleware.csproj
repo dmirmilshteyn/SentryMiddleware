@@ -5,7 +5,7 @@
     <Authors>Daniel Mirmilshteyn</Authors>
     <Company />
     <Product />
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Description>Unofficial ASP.NET Core middleware for Sentry.</Description>
     <PackageProjectUrl>https://github.com/dmirmilshteyn/SentryMiddleware</PackageProjectUrl>
   </PropertyGroup>
